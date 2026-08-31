@@ -1,0 +1,105 @@
+:root {
+    --paper: #f7f3e8;
+    --paper-strong: #efe6d1;
+    --ink: #2f2a27;
+    --muted: #8a7d69;
+    --line: rgba(122, 103, 79, 0.28);
+    --shadow: rgba(72, 55, 33, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f4efe7 0%, #efeadf 100%);
+    color: var(--ink);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#notepad-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    background: transparent;
+    position: relative;
+    display: block;
+}
+
+#status,
+#distraction-counter {
+    display: inline-block;
+    margin: 0;
+    padding: 0.8rem 0 0.7rem;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+#status {
+    padding-left: 1.5rem;
+    border-bottom: 1px solid rgba(128, 112, 88, 0.18);
+}
+
+#distraction-counter {
+    float: right;
+    padding: 0.45rem 0.7rem;
+    margin: 0.55rem 1.5rem 0 0;
+    border: 1px solid rgba(128, 112, 88, 0.18);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28);
+    opacity: 0.95;
+    vertical-align: middle;
+}
+
+#notepad {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    min-height: calc(100vh - 48px);
+    margin: 0;
+    padding: 0.1rem 1.5rem 2rem;
+    border: none;
+    outline: none;
+    resize: none;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.01em;
+    box-shadow: inset 0 0 0 1px rgba(128, 112, 88, 0.18);
+    background-image: linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 24px,
+        var(--line) 25px,
+        transparent 26px,
+        transparent 100%
+    );
+    background-size: 100% 26px;
+    /* vertical-align: top; */
+    box-sizing: border-box;
+    border-radius: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    transform: translateY(-5px);
+}
+
+#notepad::placeholder {
+    color: rgba(90, 78, 63, 0.5);
+    font-style: italic;
+}
+
+#notepad:focus {
+    box-shadow: none;
+}

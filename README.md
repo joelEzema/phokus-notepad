@@ -8,7 +8,7 @@ Well, Phokus is a small project I decided to start. The whole idea was to make a
 Right now the notepad only blurs for a few seconds when the user changes tabs. Not very evil, huh?
 
 ## Features to be added in the future
-- [ ] **Distraktion counter:** Not a spelling error.
+- [x] **Distraktion counter:** Not a spelling error.
 - [ ] **Wordcount Milestones:** Celebrates the user for typing a certain number of words.
 - [ ] **Fade out timer:** Notepad starts fading out when the user stops typing for too long. I might add something else that brings back the user's attention.
 - [ ] **Deep Mode:** When enabled, all the content in the notepad gets deleted upon switching tabs. *Yes, even in `localStorage`*

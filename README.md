@@ -13,3 +13,5 @@ Right now the notepad only blurs for a few seconds when the user changes tabs. N
 - [ ] **Fade out timer:** Notepad starts fading out when the user stops typing for too long. I might add something else that brings back the user's attention.
 - [ ] **Deep Mode:** When enabled, all the content in the notepad gets deleted upon switching tabs. *Yes, even in `localStorage`*
 
+*I almost forgot to add that the CSS is almost entirely AI-generated because I don't like having to deal with CSS. It's boring compared to JS logic*
+

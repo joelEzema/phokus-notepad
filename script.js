@@ -4,6 +4,41 @@ let distractionCounter = document.getElementById("distraction-counter");
 const resetDistPopup = document.getElementById("reset-dist-popup");
 const resetAgree = document.getElementById("reset-agree");
 const resetRefuse = document.getElementById("reset-refuse");
+const wordCounter = document.getElementById("word-counter");
+
+// Milestones for word count
+function wordMilestone(id, title, desc, threshold){
+    this.id = id;
+    this.title = title;
+    this.desc = desc;
+    this.threshold = threshold;
+}
+
+// Milestones for distractions...
+function distMilestone(id, title, desc, threshold){
+    this.id = id;
+    this.title = title;
+    this.desc = desc;
+    this.threshold = threshold;
+}
+
+const distMilestones = [
+    new distMilestone("ds_10", "ADHD, Hydroxycut", "Wait, what were we doing?", 10)
+    // milestone for 500 = mbappe special, for example nothing
+    //also make one that has desc as hyper focused on everything but the actual goal
+    
+]
+
+const wordMilestones = [
+    new wordMilestone("ms_50", "Baby Steps", "50 words. Keep going", 50),
+    new wordMilestone("ms_100", "Centurion", "Commander of a century of words", 100),
+    new wordMilestone("ms_500", "Digital Samana", "Silenced the noise on the search for enlightenment?", 500),
+    new wordMilestone("ms_1000", "Tribune", "You're moving up the ranks...", 1000),
+    new wordMilestone("ms_5000", "Phokus Legate", "Am I bleeding? Never mind...", 5000),
+    new wordMilestone("ms_10000", "Saiyan", "It's over 9000!", 10000),
+    new wordMilestone("ms_50000", "Migraine", "Go get some water", 50000)
+];
+console.log(wordMilestones);
 
 let distraktions = 0;
 
@@ -19,9 +54,18 @@ if(savedDistraktions){
     distractionCounter.textContent = `Distraktions: ${distraktions}`;
 }
 
+let words = notepad.value.split(/[\s,.\/#!$%\^&\*;:{}=\-_`~()]+/);
+let cleanWords = words.filter(word => word.length > 0);
+let wordCount = cleanWords.length;
+wordCounter.textContent = `Word Count: ${wordCount}`
+
 notepad.addEventListener("input", 
    () => {
     localStorage.setItem("draft", notepad.value)
+    words = notepad.value.split(/[\s,.\/#!$%\^&\*;:{}=\-_`~()]+/)
+    cleanWords = words.filter(word => word.length > 0);
+    wordCount = cleanWords.length;
+    wordCounter.textContent = `Word Count: ${wordCount}`
    }
 );
 

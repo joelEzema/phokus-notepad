@@ -23,14 +23,16 @@ function distMilestone(id, title, desc, threshold){
 }
 
 const distMilestones = [
-    new distMilestone("ds_10", "ADHD, Hydroxycut", "Wait, what were we doing?", 10)
-    // milestone for 500 = mbappe special, for example nothing
-    //also make one that has desc as hyper focused on everything but the actual goal
-    
+    new distMilestone("ds_10", "ADHD, Hydroxycut", "Wait, what were we doing?", 10),
+    new distMilestone("ds_20", "Lobotomy", "Error 2.2. Get back on track.", 20),
+    new distMilestone("ds_50", "Honk If You're Lost", "Honk", 50),
+    new distMilestone("ds_100", "Absolute Clown", "Scorsese doesn't hold a candle to you.", 100),
+    new distMilestone("ds_200", "Misplaced Energy", "Hyper focused on everything but the actual goal", 200),
+    new distMilestone("ds_500", "Look, a Butterfly!", "Is the other tab reaaly that interesting?", 500)  
 ]
 
 const wordMilestones = [
-    new wordMilestone("ms_50", "Baby Steps", "50 words. Keep going", 50),
+    new wordMilestone("ms_50", "Half a Dollar", "Many men wish death upon your streak.", 50),
     new wordMilestone("ms_100", "Centurion", "Commander of a century of words", 100),
     new wordMilestone("ms_500", "Digital Samana", "Silenced the noise on the search for enlightenment?", 500),
     new wordMilestone("ms_1000", "Tribune", "You're moving up the ranks...", 1000),
@@ -57,6 +59,8 @@ if(savedDistraktions){
 let words = notepad.value.split(/[\s,.\/#!$%\^&\*;:{}=\-_`~()]+/);
 let cleanWords = words.filter(word => word.length > 0);
 let wordCount = cleanWords.length;
+let currentWordCount = 0;
+let distractionlessWords = 0;
 wordCounter.textContent = `Word Count: ${wordCount}`
 
 notepad.addEventListener("input", 
@@ -66,6 +70,15 @@ notepad.addEventListener("input",
     cleanWords = words.filter(word => word.length > 0);
     wordCount = cleanWords.length;
     wordCounter.textContent = `Word Count: ${wordCount}`
+
+    // Compensates for backspacing affecting distractionless words this session
+    if((wordCount  - currentWordCount) < distractionlessWords){
+        currentWordCount = wordCount - distractionlessWords;
+    }
+
+    // Calculates words without distractions (hopefully)
+    distractionlessWords = wordCount - currentWordCount;
+    console.log(distractionlessWords);
    }
 );
 
@@ -75,6 +88,8 @@ document.addEventListener("visibilitychange", () => {
 
 document.addEventListener("visibilitychange", () => {
     if(document.hidden){
+        currentWordCount = wordCount;
+        distractionlessWords = 0;
         distraktions++;
         distractionCounter.textContent = `Distraktions: ${distraktions}`;
         statusMsg.textContent = "Distrakted?";

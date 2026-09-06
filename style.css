@@ -186,3 +186,34 @@ dialog button:active {
 #notepad:focus {
     box-shadow: none;
 }
+
+.unlocked-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    z-index: 10;
+    width: min(90%, 360px);
+    padding: 1rem 1.25rem;
+    background: var(--paper-strong);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px var(--shadow);
+    opacity: 0;
+    transform: translate(-50%, 20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.unlocked-toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.toast-title,
+.toast-desc {
+    display: block;
+}
+
+.toast-desc {
+    margin-top: 0.35rem;
+}

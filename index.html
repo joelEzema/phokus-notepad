@@ -8,8 +8,11 @@
 </head>
 <body>
     <div id="notepad-container">
-        <span id="distraction-counter">Distraktions: 0</span>
-        <span id="word-counter">Word Count: 0</span>
+        <div id="top-controls">
+            <a class="achievements-link" href="achievements.html" aria-label="View achievements" title="View achievements">🏆</a>
+            <span id="distraction-counter">Distraktions: 0</span>
+            <span id="word-counter">Word Count: 0</span>
+        </div>
         <dialog id="reset-dist-popup">
             <h2>Do you want to reset the Distraktion counter?</h2>
             <button id="reset-agree">Yes</button>
@@ -17,6 +20,7 @@
         </dialog>
         <h2 id="status">Phokus</h2>
         <textarea placeholder="Start writing your thoughts..." id="notepad"></textarea>
+        <script src="achievement-data.js"></script>
         <script src="script.js"></script>
     </div>
 </body>

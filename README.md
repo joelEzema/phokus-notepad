@@ -17,7 +17,7 @@ Try to catch all the references (if you can 😏)
 - [ ] **Fade out timer:** Notepad starts fading out when the user stops typing for too long. I also plan to add a loud sound or something like that.
 - [ ] **Deep Mode:** When enabled, all the content in the notepad gets deleted upon switching tabs. *Yes, even in `localStorage`*
 
-*I almost forgot to add that the CSS is almost entirely AI-generated because I don't like having to deal with CSS. I'd rather just focus on JS logic, thank you very much*
+*Look, the CSS is like 90% AI-generated because life is too short to center a div. I’d rather spend my brain cells on actual JavaScript logic, thank you very much.*
 
 I won't be merging any pull requests that change too much of the core mechanics of the program. Small bug fixes would be much appreciated tho.
 I'mma go get me a slice of bread now.

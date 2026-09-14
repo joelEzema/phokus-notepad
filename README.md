@@ -7,7 +7,7 @@ Well, Phokus is a small project I decided to start. The whole idea was to make a
 
 ## What I've done so far
 *Right now the notepad only blurs for a few seconds when the user changes tabs. Not very evil, huh?*  
-The above line is from a few weeks ago. I've added more things, but the highlight of the new features so far is the achievements you unlock for determination (and ADHD)
+The above line is from a few weeks ago. I've added more things, but the highlight of the new features so far is the achievements you unlock for discipline (and ADHD)
 <img width="1918" height="997" alt="phokus achievements pic" src="https://github.com/user-attachments/assets/1852e6b0-0fe1-4b2f-ad31-236270a6434a" />
 Try to catch all the references (if you can 😏)
 

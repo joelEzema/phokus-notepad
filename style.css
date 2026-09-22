@@ -136,6 +136,43 @@ body {
     opacity: 1;
 }
 
+@media (max-width: 600px) {
+    #top-controls {
+        top: 0.35rem;
+        right: 0.75rem;
+        left: 0.75rem;
+        width: auto;
+        justify-content: stretch;
+    }
+
+    .achievements-link,
+    #distraction-counter,
+    #word-counter {
+        min-width: 0;
+        padding-right: 0.45rem;
+        padding-left: 0.45rem;
+        font-size: 0.62rem;
+        letter-spacing: 0.08em;
+        white-space: nowrap;
+    }
+
+    .achievements-link {
+        flex: 0 0 auto;
+    }
+
+    #distraction-counter,
+    #word-counter {
+        flex: 1 1 0;
+        text-align: center;
+    }
+
+    #status {
+        display: block;
+        padding-top: 3.35rem;
+        padding-left: 0.75rem;
+    }
+}
+
 #notepad {
     position: relative;
     z-index: 1;

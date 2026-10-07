@@ -14,6 +14,7 @@ Try to catch all the references (if you can 😏)
 ## Features to be added in the future
 - [x] **Distraktion counter:** Not a spelling error.
 - [x] **Wordcount Milestones:** Celebrates the user for typing a certain number of words.
+- [x] **Themes:** Ability to switch between different appearances.
 - [ ] **Fade out timer:** Notepad starts fading out when the user stops typing for too long. I also plan to add a loud sound or something like that.
 - [ ] **Deep Mode:** When enabled, all the content in the notepad gets deleted upon switching tabs. *Yes, even in `localStorage`*
 

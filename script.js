@@ -6,8 +6,15 @@ const resetDistPopup = document.getElementById("reset-dist-popup");
 const resetAgree = document.getElementById("reset-agree");
 const resetRefuse = document.getElementById("reset-refuse");
 const wordCounter = document.getElementById("word-counter");
+const statusPopup = document.getElementById("status-popup");
 
 console.log(wordMilestones);
+
+//Trigger popup when statusMsg is clicked
+statusMsg.addEventListener("click", (event) => {
+    event.stopPropagation();
+    statusPopup.togglePopover();
+})
 
 // Restore the IDs of achievements that have already been unlocked.
 let unlockedAchievements = JSON.parse(localStorage.getItem("unlockedAchievements") || "[]");

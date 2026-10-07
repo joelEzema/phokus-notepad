@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Phokus Notepad is a unique productivity tool designed to fight distractions by penalizing tab-switching and rewarding continuous focus. 
         Built by Joel Ezema.">
+    <script src="theme-init.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Phokus</title>
 </head>
@@ -21,6 +22,39 @@
             <button id="reset-refuse">No</button>
         </dialog>
         <h2 id="status">Phokus</h2>
+        <div id="status-popup" popover>
+            <button id="deep-mode-btn">
+                <svg class="deep-mode-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- The high-stakes target crosshair -->
+                    <g class="deep-mode-crosshair">
+                        <circle cx="12" cy="12" r="9" stroke-dasharray="4 3"></circle>
+                        <path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path>
+                    </g>
+                    <!-- The fragile document sitting in the center -->
+                    <path d="M10 9h4v6h-4z" fill="currentColor"></path>
+                </svg>
+                Deep Mode
+            </button>
+            <button id="themes-btn">
+            <a id="themes-btn" href="themes.html">
+                <svg class="theme-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Left Side: Transparent/Light outline -->
+                    <path d="M12 2A10 10 0 0 0 12 22V2z" fill="transparent"></path>
+                    <!-- Right Side: Solid Moon/Dark fill -->
+                    <path d="M12 2v20a10 10 0 0 0 0-20z" fill="currentColor"></path>
+                </svg>  
+                Themes
+            </a>
+            </button>
+            <a id="about-btn" href="about.html">
+                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                About
+            </a>
+        </div>
         <textarea placeholder="Start writing your thoughts..." id="notepad"></textarea>
         <script src="achievement-data.js"></script>
         <script src="script.js"></script>

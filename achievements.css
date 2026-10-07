@@ -1,7 +1,7 @@
 :root {
-	--achievement-border: rgba(128, 112, 88, 0.16);
-	--achievement-border-strong: rgba(122, 103, 79, 0.24);
-	--achievement-accent: #a5967e;
+	--achievement-border: var(--line);
+	--achievement-border-strong: var(--muted);
+	--achievement-accent: var(--muted);
 }
 
 body {
@@ -93,13 +93,13 @@ body {
 	padding: 1.1rem 1.1rem 2.7rem;
 	border: 1px solid var(--achievement-border);
 	border-left: 2px solid var(--achievement-accent);
-	background: rgba(247, 243, 232, 0.28);
+	background: var(--surface);
 	transition: border-color 0.2s ease, background 0.2s ease;
 }
 
 .achievement-card:hover {
 	border-color: var(--achievement-border-strong);
-	background: rgba(247, 243, 232, 0.52);
+	background: var(--surface-hover);
 }
 
 .achievement-lock {
@@ -161,11 +161,11 @@ body {
 }
 
 .achievement-card.unlocked {
-	background: rgba(239, 230, 209, 0.38);
+	background: var(--paper-strong);
 }
 
 .achievement-card.unlocked .achievement-status {
-	color: #687554;
+	color: var(--achievement-accent);
 }
 
 .achievement-card.locked .achievement-details {
